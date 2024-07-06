@@ -1,0 +1,41 @@
+Problem Statement
+Objective:
+To create a web page that allows users to click and generate circles at the clicked locations. Each circle will have a random radius, and the code will check if any two generated circles intersect.
+
+Functional Requirements:
+
+Circle Generation:
+
+On each click, a new circle is generated at the click location with a random radius between 50 and 200 pixels.
+The circles are visually represented on the web page.
+Circle Intersections:
+
+The code will check if two circles intersect when there are exactly two circles on the page.
+Intersection is determined based on the distance between the centers of the two circles being less than or equal to the sum of their radii.
+Reset Mechanism:
+
+If there are already two circles on the page, they are removed before adding a new circle.
+This ensures that at most two circles are displayed and checked for intersection at any time.
+Logging Intersection:
+
+The intersection status (true/false) is logged to the console each time two circles are present and checked for intersection.
+Code Explanation
+The provided JavaScript code achieves this with the following key steps:
+
+Data Storage:
+
+Uses an array circleCoordinate to store the coordinates and radii of the circles.
+Intersection Check:
+
+Defines a function circleIntersect to calculate if two circles intersect based on their centers and radii.
+Intersection Logging:
+
+Defines a function logIfIntersectingCircle to extract circle data and check for intersection using circleIntersect.
+Event Listener for Clicks:
+
+Listens for click events on the document.
+Removes existing circles if two are already present.
+Generates new circles at the click location with random radii.
+Adds the new circle's data to circleCoordinate and the circle element to the DOM.
+Checks for intersection if there are two circles, logging the result to the console.
+By following these steps, the code provides a dynamic way to visually create circles and determine their intersection on a web page.
